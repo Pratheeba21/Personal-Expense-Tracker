@@ -1,0 +1,32 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body {
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%; animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;} }
+        .container {
+            background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);
+            padding: 30px; border-radius: 20px; width: 350px; border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3); color: white;
+        }
+        input {
+            width: 100%; padding: 10px; margin: 5px 0; border: none; border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2); color: white; outline: none;
+        }
+        input::placeholder { color: #eee; }
+        button {
+            width: 100%; padding: 10px; margin-top: 10px; border: none; border-radius: 8px;
+            background: white; color: #e73c7e; font-weight: bold; cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { transform: scale(1.02); background: #eee; }
+        ul { list-style: none; margin-top: 20px; max-height: 200px; overflow-y: auto; }
+        li {
+            background: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 8px;
+            margin-bottom: 8px; display: flex; justify-content: space-between;
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+        .total-box { margin-top: 15px; text-align: center; font-size: 1.2rem; font-weight: bold; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }
+        .dlt-btn { width: auto; padding: 2px 8px; margin: 0; background: #ff4d4d; color: white; font-size: 12px; }

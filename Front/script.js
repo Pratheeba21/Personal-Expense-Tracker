@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:3000/expenses";
+const API_URL =
+  "https://personal-expense-tracker-backend-zint.onrender.com/expenses";
 let totalValue = 0;
 
 const nameInput = document.getElementById("name");

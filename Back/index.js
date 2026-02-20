@@ -11,7 +11,9 @@ app.use(cors());
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://localhost:27017/expenseDB")
+  .connect(
+    "mongodb+srv://Pratheeba:PratheebaMongoDBAtlas@cluster0.ixnufht.mongodb.net/expenseDB?appName=Cluster0",
+  )
   .then(() => console.log("MongoDB Connected for Expenses!"))
   .catch((err) => console.log(err));
 
@@ -35,4 +37,6 @@ app.delete("/expenses/:id", async (req, res) => {
   res.json({ message: "Deleted" });
 });
 
-app.listen(3000, () => console.log("Expense Server running on port 3000"));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log("Expense Server running on port 3000"));
